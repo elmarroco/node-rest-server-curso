@@ -20,9 +20,8 @@ const password = "Jose123456";
 if ((process.env.NODE_ENV = "dev")) {
   urlDB = "mongodb://localhost:21018/cafe";
 } else {
-  urlDB = `mongodb+srv://admin:${password}@cluster0-tp4og.mongodb.net/test?retryWrites=true&w=majority`;
+  urlDB = `mongodb+srv://${user}:${password}@cluster0-tp4og.mongodb.net/test?retryWrites=true&w=majority`;
 }
-
 
 urldBD = encodeURI(urlDB);
 
