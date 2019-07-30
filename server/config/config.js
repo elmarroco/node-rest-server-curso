@@ -23,6 +23,7 @@ if ((process.env.NODE_ENV = "dev")) {
   urlDB = `mongodb+srv://${user}:${password}@cluster0-tp4og.mongodb.net/test?retryWrites=true&w=majority`;
 }
 
-urldBD = encodeURI(urlDB);
+urlDB = `mongodb+srv://${user}:${password}@cluster0-tp4og.mongodb.net/test?retryWrites=true&w=majority`;
+
 
 process.env.URLDB = urlDB;
