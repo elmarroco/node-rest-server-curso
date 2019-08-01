@@ -13,11 +13,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// Configuración global de rutas
+app.use(require("./routes/index"));
+
 // Habilitar la carpeta public
 app.use(express.static(path.resolve(__dirname, "../public")));
 
-// Configuración global de rutas
-app.use(require("./routes/index"));
 
 mongoose.connect(process.env.URLDB, (err, res) => {
   if (err) throw err;
